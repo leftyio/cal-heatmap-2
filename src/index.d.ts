@@ -66,7 +66,7 @@ declare namespace CalHeatmap {
     destroy: () => Promise<unknown>;
   }
   export interface IPluginContructor {
-    new (calendar?: CalHeatmap): IPlugin;
+    new(calendar?: CalHeatmap): IPlugin;
   }
 
   export interface PluginOptions {
@@ -95,7 +95,7 @@ declare class CalHeatmap {
 
   fill(dataSource?: OptionsType['data']['source']): Promise<unknown>;
 
-  on(name: string, fn: () => any): void;
+  on(name: string, fn: (event: Event, timestamp: CalHeatmap.Timestamp, value: any) => any): void;
 
   dimensions(): CalHeatmap.Dimensions;
 
