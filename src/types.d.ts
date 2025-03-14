@@ -1,9 +1,10 @@
-import type { PluginFunc } from 'dayjs';
 import type dayjs from 'dayjs';
+import type { PluginFunc } from 'dayjs';
 import type EventEmitter from 'eventemitter3';
-import type Options, { OptionsType } from './options/Options';
-import type DateHelper from './helpers/DateHelper';
 import type CalendarPainter from './calendar/CalendarPainter';
+import type DateHelper from './helpers/DateHelper';
+import type Options from './options/Options';
+import type { DataOptions, DataRecord, OptionsType } from './options/Options';
 
 export type Timestamp = number;
 export type DomainType =
@@ -130,4 +131,5 @@ declare const helpers: {
 };
 
 export default CalHeatmap;
-export { constants, helpers };
+export { constants, DataOptions, DataRecord, helpers, OptionsType };
+
