@@ -102,7 +102,7 @@ declare class CalHeatmap {
 
   fill(dataSource?: OptionsType['data']['source']): Promise<unknown>;
 
-  on(name: string, fn: () => any): void;
+  on(name: string, fn: Function): void;
 
   dimensions(): Dimensions;
 
